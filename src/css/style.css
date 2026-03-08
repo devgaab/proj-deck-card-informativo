@@ -1,10 +1,30 @@
 body {
     font-family: 'Outfit', sans-serif;
+    /* background-image: url("/assets/image/fundo-base2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    min-height: 100vh;
+
+    /* Fundo semi-transparente */
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    /* Intensidade do desfoque */
+    /* backdrop-filter: blur(10px); */
+
+    background-color: #000;
+}
+
+body::before {
+    content: "";
     background-image: url("/assets/image/fundo-base2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.6;
 }
 
 .cabecalho {
@@ -13,7 +33,7 @@ body {
 }
 
 .cabecalho img {
-    width: 250px;
+    width: 200px;
 }
 
 /* .cabecalho h1 {
@@ -31,19 +51,14 @@ body {
 }
 
 .lista-personagens {
-    width: 330px;
-    height: 520px;
+    width: 320px;
+    height: 500px;
     position: relative;
-}
-
-.btn-seta {
-    background: transparent;
-    border: none;
 }
 
 .btn-seta img {
     /* background-color: #fff; */
-    width: 60px;
+    width: 50px;
     /* height: 70px; */
     /* border-radius: 50px; */
     /* border: none; */
@@ -55,30 +70,30 @@ body {
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 
-/* .btn-seta.btn-voltar {
+.btn-seta.btn-voltar {
     transform: rotateY(180deg);
-} */
+}
 
 .btn-seta:hover {
     transform: scale(1.1);
 }
 
 .cartao {
+    background: url('/assets/image/fundo-opicional.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
     opacity: 0;
     height: 100%;
     position: absolute;
     padding: 12px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
     border-radius: 10px;
     transition: opacity 0.3s ease-in-out;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    /* background: url('/assets/image/card-fundo.png') no-repeat;
-    background-size: cover;
-    background-position: right; */
 }
 
 
@@ -89,11 +104,11 @@ body {
 
 .cartao .imagem-personagem {
     width: 100%;
-    max-height: 280px;
+    max-height: 260px;
 }
 
 .cartao .nome {
-    background-color: rgba(179, 177, 185, 0.7);
+    background-color: rgba(155, 154, 160, 0.7);
     padding: 8px 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -105,15 +120,24 @@ body {
 
 .cartao .descricao {
     background-color: rgba(255, 255, 255, 0.8);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+
+    border-radius: 12px;
 }
 
 .cartao .descricao .titulo {
     background-color: #333;
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
-    padding: 12px;
+    padding: 10px;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .cartao .descricao .texto {
@@ -124,13 +148,12 @@ body {
     overflow-y: auto;
 }
 
-.cartao.fundo-1 {
-    background: url('/assets/image/fundo-1.png') no-repeat;
+/* .cartao.fundo-1 {
+    background: url('/assets/image/fundo-opicional.jpg') no-repeat;
     background-size: cover;
-    background-position: left;
-
-    /* filter: blur(5px); */
+    background-position: center;
 }
+
 
 .cartao.fundo-2 {
     background: url('/assets/image/fundo-2.jpg') no-repeat;
@@ -162,4 +185,4 @@ body {
     background: url('/assets/image/fundo-6.jpg') no-repeat;
     background-size: cover;
     background-position: right;
-}
+} */

@@ -7,3 +7,8 @@
 ul {
     list-style: none;
 }
+
+button {
+    background: transparent;
+    border: none;
+}
