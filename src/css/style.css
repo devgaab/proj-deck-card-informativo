@@ -16,7 +16,7 @@ body {
 
 body::before {
     content: "";
-    background-image: url("/assets/image/fundo-base2.jpg");
+    background-image: url("../image/fundo-base2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -79,7 +79,7 @@ body::before {
 }
 
 .cartao {
-    background: url('/assets/image/fundo-opicional.jpg') no-repeat;
+    background: url('../image/fundo-opicional.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 
